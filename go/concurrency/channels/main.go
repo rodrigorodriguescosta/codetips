@@ -10,7 +10,7 @@ func main() {
 	channelExample()
 }
 
-// readChat function that receive a chanel(readonly)
+// readChat function that receive a channel(readonly)
 // when we put <- vefore the channel, it means the channel is readonly
 func readChat(ch <-chan string) {
 	ok := true
@@ -45,7 +45,7 @@ func sendMessage(ch chan<- string, chState chan<- bool) {
 }
 
 func channelExample() {
-	// create a channel(unbuffered) to transfer data bwtweeen go routine
+	// create a channel(unbuffered) to transfer data between go routine
 	chChat := make(chan string)
 
 	// this another channel(unbuffered) is used to control when the job is done
